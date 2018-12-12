@@ -1,0 +1,23 @@
+cargo-features = ["rename-dependency"]
+
+[package]
+name = "blue-pill-quickstart"
+version = "0.1.0"
+authors = ["Guillaume Pinot <texitoi@texitoi.eu>"]
+edition = "2018"
+
+[dependencies]
+stm32f103xx = { git = "https://github.com/japaric/stm32f103xx" }
+stm32f103xx-hal = { git = "https://github.com/japaric/stm32f103xx-hal" }
+
+[dependencies.cortex-m]
+version = "0.5.0"
+
+[dependencies.cortex-m-rt]
+version = "0.5.0"
+
+[dependencies.cortex-m-semihosting]
+version = "0.3.0"
+
+[dependencies.panic-semihosting]
+version = "0.3.0"
