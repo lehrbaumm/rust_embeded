@@ -1,23 +1,18 @@
-cargo-features = ["rename-dependency"]
-
 [package]
-name = "blue-pill-quickstart"
+name = "rust_embeded"
+authors = ["Maximilian Lehrbaum<maximilian@lehrbaum.dev>"]
 version = "0.1.0"
-authors = ["Guillaume Pinot <texitoi@texitoi.eu>"]
-edition = "2018"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-stm32f103xx = { git = "https://github.com/japaric/stm32f103xx" }
-stm32f103xx-hal = { git = "https://github.com/japaric/stm32f103xx-hal" }
+embedded-hal = "0.2.7"
+nb = "1"
+cortex-m = "0.7.6"
+cortex-m-rt = "0.7.1"
+panic-halt = "0.2.0"
 
-[dependencies.cortex-m]
-version = "0.5.0"
-
-[dependencies.cortex-m-rt]
-version = "0.5.0"
-
-[dependencies.cortex-m-semihosting]
-version = "0.3.0"
-
-[dependencies.panic-semihosting]
-version = "0.3.0"
+[dependencies.stm32f1xx-hal]
+version = "0.10.0"
+features = ["rt", "stm32f103", "medium"]
